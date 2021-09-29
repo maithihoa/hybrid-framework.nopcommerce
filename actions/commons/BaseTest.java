@@ -10,6 +10,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 		private WebDriver driver;
@@ -31,25 +33,25 @@ public class BaseTest {
 //			
 			switch(browser) {
 			case CHROME:
-				System.setProperty("webdriver.chrome.driver", ProjectPath + "\\browserDriver\\chromedriver1.exe");
+				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				break;
 			case FIREFOX:
-				System.setProperty("webdriver.gecko.driver", ProjectPath + "\\browserDriver\\geckodriver.exe");
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				break;
 			case EDGE:
-				System.setProperty("webdriver.edge.driver", ProjectPath + "\\browserDriver\\msedgedriver.exe");
+				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
 				break;
 			case COCCOC:
-				System.setProperty("webdriver.chrome.driver", ProjectPath + "\\browserDriver\\chromedriver.exe");
+				WebDriverManager.chromedriver().driverVersion("92.0.4515.107").setup();
 				ChromeOptions options = new ChromeOptions();
 				options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
 				driver = new ChromeDriver(options);
 				break;
 			case OPERA:
-				System.setProperty("webdriver.opera.driver", ProjectPath + "\\browserDriver\\operadriver.exe");
+				WebDriverManager.operadriver().setup();
 				driver = new OperaDriver();
 				break;
 			default:

@@ -20,5 +20,22 @@
 	<classpathentry kind="src" path="javaTester"/>
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="selenium-server-standalone-3.141.59 (3).jar"/>
+	<classpathentry kind="lib" path="libraries/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-collections4-4.3.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-io-2.7.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="libraries/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="libraries/httpclient5-5.0.1.jar"/>
+	<classpathentry kind="lib" path="libraries/httpcore5-5.0.1.jar"/>
+	<classpathentry kind="lib" path="libraries/jarchivelib-1.0.0.jar"/>
+	<classpathentry kind="lib" path="libraries/jsoup-1.13.1.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-java-2.53.1-srcs.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-server-standalone-3.141.59 (3).jar"/>
+	<classpathentry kind="lib" path="libraries/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="lib" path="libraries/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="libraries/webdrivermanager-4.2.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
