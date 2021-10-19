@@ -3,7 +3,6 @@ package commons;
 
 
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -18,7 +17,23 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import PageObjects.nopcommerce.AddressesPageObject;
+import PageObjects.nopcommerce.BackInStockSubScriptionPageObject;
+import PageObjects.nopcommerce.ChangePasswordPageObject;
+import PageObjects.nopcommerce.CustomerInfoPageObject;
+import PageObjects.nopcommerce.DownloadableProductPageObject;
+import PageObjects.nopcommerce.MyProductsReviewsPageObject;
+import PageObjects.nopcommerce.OrdersPageObject;
+import PageObjects.nopcommerce.PageGenerator;
+import PageObjects.nopcommerce.RewardsPointsPageObject;
+import PageUIs.nopcommerce.AddressesPageUI;
+import PageUIs.nopcommerce.BasePageUI;
+import PageUIs.nopcommerce.CustomerInfoPageUI;
+import PageUIs.nopcommerce.MyProductReviewsPageUI;
+import PageUIs.nopcommerce.OrdersPageUI;
+
 public class BasePage {
+	private  WebDriver driver;
 	public static BasePage getBasePage() {
 		return new BasePage();
 	} 
@@ -327,7 +342,55 @@ public class BasePage {
 		explicitWait = new WebDriverWait(driver, longTimeout);
 		return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
-	
+	public AddressesPageObject clickAddressesPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.ADDRESSES_PAGE_LINK);
+		clickToELement(driver, BasePageUI.ADDRESSES_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getAddressesPageObject(driver);
+	}
+	public DownloadableProductPageObject getDownloadProductsPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.DOWNLOADABLE_PRODUCTS_PAGE_LINK);
+		clickToELement(driver, BasePageUI.DOWNLOADABLE_PRODUCTS_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getDownloadableProductPageObject(driver);
+	}
+	public MyProductsReviewsPageObject clickMyProductReviewPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.MY_PRODUCT_REVIEWS_PAGE_LINK);
+		clickToELement(driver, BasePageUI.MY_PRODUCT_REVIEWS_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getMyProductsReviewsPageObject(driver);
+	}
+	public ChangePasswordPageObject clickChangePasswordPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		clickToELement(driver, BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getChangePasswordPageObject(driver);
+	}
+	public BackInStockSubScriptionPageObject getBackInStockSubScriptionPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_PAGE_LINK);
+		clickToELement(driver, BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getBackInStockSubScriptionPageObject(driver);
+	}
+	public RewardsPointsPageObject clickRewardsPoints(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		clickToELement(driver, BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getRewardsPointsPageObject(driver);
+	}
+	public OrdersPageObject getOrderPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.ORDER_PAGE_LINK);
+		clickToELement(driver, BasePageUI.ORDER_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getOrdersPageObject(driver);
+	}	
+	public CustomerInfoPageObject clickCustomerInforPage(WebDriver driver) {
+		waitForElementInvisible(driver,BasePageUI.CUSTOMER_INFO_PAGE_LINK);
+		clickToELement(driver, BasePageUI.CUSTOMER_INFO_PAGE_LINK);
+		SleepInSecond(3);
+		return PageGenerator.getCustomerInfoPageObject(driver);
+	}
+
 	private Alert alert;
 	private Select select;
 	private Actions action;
