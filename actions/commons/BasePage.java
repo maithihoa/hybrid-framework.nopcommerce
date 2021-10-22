@@ -161,7 +161,7 @@ public class BasePage {
 	
 	public void selectItemInCustomDropdown(WebDriver driver, String parentLocation,String childItemLocator, String expectedItem) {
 		getWebElement(driver, parentLocation);
-		SleepInSecond(1);
+		sleepInSecond(1);
 		
 		explicitWait = new WebDriverWait (driver, longTimeout);
 		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
@@ -169,16 +169,16 @@ public class BasePage {
 					if (item.getText().trim().equals(expectedItem)) {
 						jsExecutor = (JavascriptExecutor) driver;
 						jsExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
-						SleepInSecond(1);
+						sleepInSecond(1);
 						
 						item.click();
-						SleepInSecond(1);
+						sleepInSecond(1);
 						break;
 					}
 				}
 	}
 	
-	public void SleepInSecond(long time) {
+	public void sleepInSecond(long time) {
 		try{
 			Thread.sleep(time + 1000);
 		} catch (InterruptedException e){
@@ -294,7 +294,7 @@ public class BasePage {
 		WebElement element = getWebElement(driver, locator);
 		String originalStyle = element.getAttribute("style");
 		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 2px solid red; border-style: dashed;");
-		SleepInSecond(1);
+		sleepInSecond(1);
 		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
 	}
 	
@@ -343,51 +343,51 @@ public class BasePage {
 		return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 	public AddressesPageObject clickAddressesPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.ADDRESSES_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.ADDRESSES_PAGE_LINK);
 		clickToELement(driver, BasePageUI.ADDRESSES_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getAddressesPageObject(driver);
 	}
 	public DownloadableProductPageObject getDownloadProductsPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.DOWNLOADABLE_PRODUCTS_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.DOWNLOADABLE_PRODUCTS_PAGE_LINK);
 		clickToELement(driver, BasePageUI.DOWNLOADABLE_PRODUCTS_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getDownloadableProductPageObject(driver);
 	}
 	public MyProductsReviewsPageObject clickMyProductReviewPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.MY_PRODUCT_REVIEWS_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.MY_PRODUCT_REVIEWS_PAGE_LINK);
 		clickToELement(driver, BasePageUI.MY_PRODUCT_REVIEWS_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getMyProductsReviewsPageObject(driver);
 	}
 	public ChangePasswordPageObject clickChangePasswordPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
 		clickToELement(driver, BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getChangePasswordPageObject(driver);
 	}
 	public BackInStockSubScriptionPageObject getBackInStockSubScriptionPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_PAGE_LINK);
 		clickToELement(driver, BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getBackInStockSubScriptionPageObject(driver);
 	}
 	public RewardsPointsPageObject clickRewardsPoints(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
 		clickToELement(driver, BasePageUI.CHANGE_PASSWORD_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getRewardsPointsPageObject(driver);
 	}
 	public OrdersPageObject getOrderPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.ORDER_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.ORDER_PAGE_LINK);
 		clickToELement(driver, BasePageUI.ORDER_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getOrdersPageObject(driver);
 	}	
 	public CustomerInfoPageObject clickCustomerInforPage(WebDriver driver) {
-		waitForElementInvisible(driver,BasePageUI.CUSTOMER_INFO_PAGE_LINK);
+		waitForElementClickable(driver,BasePageUI.CUSTOMER_INFO_PAGE_LINK);
 		clickToELement(driver, BasePageUI.CUSTOMER_INFO_PAGE_LINK);
-		SleepInSecond(3);
+		sleepInSecond(3);
 		return PageGenerator.getCustomerInfoPageObject(driver);
 	}
 
