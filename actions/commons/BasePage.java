@@ -24,7 +24,6 @@ import PageObjects.nopcommerce.CustomerInfoPageObject;
 import PageObjects.nopcommerce.DownloadableProductPageObject;
 import PageObjects.nopcommerce.MyProductsReviewsPageObject;
 import PageObjects.nopcommerce.OrdersPageObject;
-import PageObjects.nopcommerce.PageGenerator;
 import PageObjects.nopcommerce.RewardsPointsPageObject;
 import PageUIs.nopcommerce.AddressesPageUI;
 import PageUIs.nopcommerce.BasePageUI;
@@ -221,10 +220,10 @@ public class BasePage {
 		return getWebElement(driver,locator).getCssValue(propertyName);
 	}
 	
-	public int getElementSize(WebDriver driver, String locator, String propertyName ) {
+	public int getElementSize(WebDriver driver, String locator ) {
 		return getWebElements(driver,locator).size();
 	}
-	public int getElementSize(WebDriver driver, String locator, String propertyName, String... values ) {
+	public int getElementSize(WebDriver driver, String locator, String... values ) {
 		return getWebElements(driver,castRestParameter(locator, values)).size();
 	}
 	
@@ -288,6 +287,10 @@ public class BasePage {
 	public void sendkeyBoardToElement(WebDriver driver, String locator, Keys key) {
 		action = new Actions(driver);
 		action.sendKeys(getWebElement(driver,locator), key).perform();
+	}
+	public void sendkeyBoardToElement(WebDriver driver, String locator, Keys key, String... values) {
+		action = new Actions(driver);
+		action.sendKeys(getWebElement(driver,castRestParameter(locator, values)), key).perform();
 	}
 	
 	public String convertRGBAToHexa(String rgbaValue) {
@@ -447,12 +450,19 @@ public class BasePage {
 		waitForElementClickable(driver,castRestParameter(BasePageUI.DYNAMIC_LOCATOR_LINK, pageName));
 		clickToELement(driver, castRestParameter(BasePageUI.DYNAMIC_LOCATOR_LINK, pageName));
 	}
-
+	public void UploadMultipleFiles(WebDriver driver, String locator, String... fileNames) {
+		String filePath = System.getProperty("user.dir")+"\\Upload\\";
+		String fullFileName ="";
+		for(String file:fileNames) {
+			fullFileName = fullFileName + filePath + file +"\n";
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver,locator).sendKeys(fullFileName);
+	}
 	private Alert alert;
 	private Select select;
 	private Actions action;
 	private long longTimeout = 30;
-	private long shortTimeOut = 5;
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	
