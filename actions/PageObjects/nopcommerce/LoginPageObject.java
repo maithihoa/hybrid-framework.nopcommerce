@@ -27,6 +27,9 @@ public class LoginPageObject extends BasePage {
 	public HomePageObject clickToLoginButton() {
 		waitForElementVisible(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToELement(driver, LoginPageUI.LOGIN_BUTTON);
+		if(driver.toString().contains("chrome") || driver.toString().contains("edge")){
+			sleepInSecond(3);
+		}
 		return PageGenerator.getHomePage(driver);
 		
 	}
