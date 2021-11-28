@@ -52,5 +52,6 @@
 	<classpathentry kind="lib" path="extendReportLib/mongodb-driver-core-3.0.4.jar"/>
 	<classpathentry kind="lib" path="extendReportLib/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="lib" path="extendReportLib/testng-6.9.9.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-logging-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

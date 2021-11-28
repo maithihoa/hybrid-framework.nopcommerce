@@ -25,6 +25,9 @@ public class BaseTest {
 		protected BaseTest() {
 			log = LogFactory.getLog(getClass());
 		}
+		private enum Browser{
+			CHROME,FIREFOX,EDGE,COCCOC,OPERA
+		}
 		protected WebDriver getBrowserName(String browserName, String url) {
 			Browser browser = Browser.valueOf(browserName.toUpperCase());
 //			if(browser == Browser.CHROME){
