@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [NopCommerce]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="http://demo.nopcommerce.com/"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="commons.MethodListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Run on CHROME(failed)">
+    <parameter name="browser" value="CHROME"/>
+    <classes>
+      <class name="com.nopcommerce.user.Level_13_Register_Login_Log_Report">
+        <methods>
+          <include name="TC_01_Register"/>
+          <include name="afterclass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.nopcommerce.user.Level_13_Register_Login_Log_Report -->
+    </classes>
+  </test> <!-- Run on CHROME(failed) -->
+  <test thread-count="2" parallel="tests" name="Run on FIREFOX(failed)">
+    <parameter name="browser" value="FIREFOX"/>
+    <classes>
+      <class name="com.nopcommerce.user.Level_13_Register_Login_Log_Report">
+        <methods>
+          <include name="TC_01_Register"/>
+          <include name="afterclass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.nopcommerce.user.Level_13_Register_Login_Log_Report -->
+    </classes>
+  </test> <!-- Run on FIREFOX(failed) -->
+</suite> <!-- Failed suite [NopCommerce] -->

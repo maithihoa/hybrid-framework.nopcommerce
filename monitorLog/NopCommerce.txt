@@ -1,0 +1,40 @@
+[INFO ] [2021-11-28 22:45:36,102] Pre-condition - Step 01: Open browserCHROME
+[INFO ] [2021-11-28 22:45:36,102] Pre-condition - Step 01: Open browserFIREFOX
+[INFO ] [2021-11-28 22:45:43,258] TC_01_Register - Step 01: Open Register link
+[INFO ] [2021-11-28 22:45:45,187] TC_01_Register - Step 02: Click to Gender Male radio
+[INFO ] [2021-11-28 22:45:45,518] TC_01_Register - Step 03: Click to FirstName textbox
+[INFO ] [2021-11-28 22:45:45,859] TC_01_Register - Step 04: Click to LastName textbox
+[INFO ] [2021-11-28 22:45:46,213] TC_01_Register - Step 05: Select Day dropdown
+[INFO ] [2021-11-28 22:45:46,491] TC_01_Register - Step 06: Select Day dropdown
+[INFO ] [2021-11-28 22:45:46,734] TC_01_Register - Step 07: Select Day dropdown
+[INFO ] [2021-11-28 22:45:46,970] TC_01_Register - Step 08: Click to Email textboxhoamt-1579286486@gmail.com
+[INFO ] [2021-11-28 22:45:47,283] TC_01_Register - Step 09: Click to Company textbox
+[INFO ] [2021-11-28 22:45:47,575] TC_01_Register - Step 10: Click to Password textbox123456987
+[INFO ] [2021-11-28 22:45:47,864] TC_01_Register - Step 11: Click to ConfirmPassword textbox
+[INFO ] [2021-11-28 22:45:48,160] TC_01_Register - Step 12: Click to Register button
+[INFO ] [2021-11-28 22:45:49,168] TC_01_Register - Step 01: Open Register link
+[INFO ] [2021-11-28 22:45:50,003] TC_01_Register - Step 13: Verify Register success message is displayed
+[INFO ] [2021-11-28 22:45:50,190]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-11-28 22:45:50,196] TC_01_Register - Step 14: Click to logout button
+[INFO ] [2021-11-28 22:45:51,326] TC_01_Register - Step 02: Click to Gender Male radio
+[INFO ] [2021-11-28 22:45:51,762] TC_01_Register - Step 03: Click to FirstName textbox
+[INFO ] [2021-11-28 22:45:51,955] TC_01_Register - Step 04: Click to LastName textbox
+[INFO ] [2021-11-28 22:45:52,146] TC_01_Register - Step 05: Select Day dropdown
+[INFO ] [2021-11-28 22:45:52,208] TC_02_Login - Step 01: Click to Login link
+[INFO ] [2021-11-28 22:45:52,705] TC_01_Register - Step 06: Select Day dropdown
+[INFO ] [2021-11-28 22:45:52,969] TC_02_Login - Step 02: Enter to Email textbox
+[INFO ] [2021-11-28 22:45:53,187] TC_01_Register - Step 07: Select Day dropdown
+[INFO ] [2021-11-28 22:45:53,270] TC_02_Login - Step 03: Enter to Password textbox
+[INFO ] [2021-11-28 22:45:53,561] TC_02_Login - Step 04: Click to Login button
+[INFO ] [2021-11-28 22:45:53,634] TC_01_Register - Step 08: Click to Email textboxhoamt1143880036@gmail.com
+[INFO ] [2021-11-28 22:45:53,842] TC_01_Register - Step 09: Click to Company textbox
+[INFO ] [2021-11-28 22:45:54,024] TC_01_Register - Step 10: Click to Password textbox123456987
+[INFO ] [2021-11-28 22:45:54,242] TC_01_Register - Step 11: Click to ConfirmPassword textbox
+[INFO ] [2021-11-28 22:45:54,424] TC_01_Register - Step 12: Click to Register button
+[INFO ] [2021-11-28 22:45:57,089] TC_01_Register - Step 13: Verify Register success message is displayed
+[INFO ] [2021-11-28 22:45:57,299]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-11-28 22:45:57,299] TC_01_Register - Step 14: Click to logout button
+[INFO ] [2021-11-28 22:46:00,073] TC_02_Login - Step 01: Click to Login link
+[INFO ] [2021-11-28 22:46:01,544] TC_02_Login - Step 02: Enter to Email textbox
+[INFO ] [2021-11-28 22:46:01,763] TC_02_Login - Step 03: Enter to Password textbox
+[INFO ] [2021-11-28 22:46:01,898] TC_02_Login - Step 04: Click to Login button

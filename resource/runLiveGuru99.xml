@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LiveGuru99">
+	<parameter name="url" value="http://live.demoguru99.com/" />
+
+	<test name="Run on FIREFOX">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.liveguru99.TC_01_Create_ACC_And_Verify_Backend" />
+		</classes>
+	</test>
+</suite>
