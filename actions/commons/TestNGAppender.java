@@ -7,7 +7,7 @@ import org.testng.Reporter;
 /**
  * TestNG requires a call to Reporter.log to insert logging statements into the report
  */
-public class testNGAppender extends AppenderSkeleton {
+public class TestNGAppender extends AppenderSkeleton {
 
 	@Override
 	protected void append(LoggingEvent event) {

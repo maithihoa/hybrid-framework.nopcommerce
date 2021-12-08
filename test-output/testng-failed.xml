@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [NopCommerce]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="http://demo.nopcommerce.com/"/>
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>

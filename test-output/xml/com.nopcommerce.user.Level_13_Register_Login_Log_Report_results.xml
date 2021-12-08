@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Run on FIREFOX"
+<testsuite name="Run on CHROME"
            tests="2"
            failures="1"
            errors="0"
            skipped="0"
-           time="15.476">
+           time="14.402">
   <properties />
-            <testcase name="TC_01_Register" time="10.901" classname="com.nopcommerce.user.Level_13_Register_Login_Log_Report">
+            <testcase name="TC_01_Register" time="10.086" classname="com.nopcommerce.user.Level_13_Register_Login_Log_Report">
                 <failure type="java.lang.AssertionError"
                   message="expected [false] but found [true]"
               >
@@ -44,6 +44,6 @@
           </testcase>
   
   
-            <testcase name="TC_02_Login" time="4.575" classname="com.nopcommerce.user.Level_13_Register_Login_Log_Report" />
+            <testcase name="TC_02_Login" time="4.316" classname="com.nopcommerce.user.Level_13_Register_Login_Log_Report" />
       
 </testsuite>
